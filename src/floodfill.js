@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import "../app/globals.css"; // Ensure TailwindCSS is imported
-import { useSpring, useSprings, animated, config } from '@react-spring/web'
+import { useSpring, useSprings, animated } from '@react-spring/web'
 
 export default function FloodFill() {
   const [algorithm, setAlgorithm] = useState('BFS');
