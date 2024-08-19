@@ -62,7 +62,7 @@ export default function FloodFill() {
         // Add a step to the explanation
         setSteps(prevSteps => [
           ...prevSteps,
-          `${algorithm === 'BFS' ? 'Shifted' : 'Popped'} tile (${nextRow}, ${nextCol}) and flooded it.`
+          `${algorithm === 'BFS' ? 'Shifted' : 'Popped'} tile (${nextRow}, ${nextCol}) from ${algorithm === 'BFS' ? 'queue' : 'stack'} and flooded it.`
         ]);
 
         // If new tiles were added to the queue/stack, mention it
@@ -364,7 +364,7 @@ export default function FloodFill() {
       "In the case of this visualization, the algorithm will shift a tile from the front of the queue, check if said tile is already flooded, and if not, will add each of its non-flooded and non-blocked neighbors (up, down, left, and right) to the back of the queue. It will then shift out the next tile in the queue, repeating the process until the queue is completely empty.",
       
       DFS: "Depth-First Search (DFS) is an algorithm for traversing or searching tree or graph data structures. It starts at a selected node and explores as far as possible along each branch before backtracking. This can be done recursively or by utilizing a last-in-first-out stack structure. " +
-      "In the case of this visualization, the algorithm will pop off the most recently added tile (the one at the top of the stack) and then place each of its non-flooded, non-blocked neighbors atop the stack in the following order: first up, then down, then left, then right. The algorithm will then pop off the new top of the stack and repeat the process until the stack is empty."
+      "In the case of this visualization, the algorithm will pop off the most recently added tile (the one at the top of the stack) and then place each of its non-flooded, non-blocked neighbors atop the stack in the following order: first up, then down, then left, then right. The algorithm will then pop off the new top of the stack and repeat the process until the stack is completely empty."
     };
   
     return (
