@@ -141,7 +141,7 @@ export default function FloodFill() {
   };
 
   // Creates the visual that allows alternating between BFS and DFS
-  const algorithmSelector = () => {
+  const AlgorithmSelector = () => {
     const isDFSMode = algorithm === 'DFS';
 
     const { transform, opacity } = useSpring({
@@ -236,7 +236,7 @@ export default function FloodFill() {
   };
 
   // Generates the interactive grid
-  const interactiveGridDisplay = () => {
+  const InteractiveGridDisplay = () => {
     const floodSprings = useSprings(
       image.flat().length, // Total number of divs
       image.flat().map((pixel, index) => ({
@@ -386,7 +386,7 @@ export default function FloodFill() {
     <div className="flex flex-col items-center pt-4 space-y-1">
       <h1 className="text-4xl font-extrabold">
         Flood Fill 
-        <span className="mx-2">{ algorithmSelector() }</span>
+        <span className="mx-2">{ AlgorithmSelector() }</span>
         Visualizer
       </h1>
 
@@ -405,7 +405,7 @@ export default function FloodFill() {
 
         {/* Grid visualization */}
         <div className="flex flex-col items-center mt-4">
-          { interactiveGridDisplay() }
+          { InteractiveGridDisplay() }
           { buttonGroupDisplay() }
         </div>
 
