@@ -142,17 +142,16 @@ export default function FloodFill() {
 
   // Creates the visual that allows alternating between BFS and DFS
   const algorithmSelector = () => {
-    const [flipped, setFlipped] = useState(false);
-  
+    const isDFSMode = algorithm === 'DFS';
+
     const { transform, opacity } = useSpring({
-      opacity: flipped ? 1 : 0,
-      transform: `perspective(600px) rotateX(${flipped ? 180 : 0}deg)`,
+      opacity: isDFSMode ? 1 : 0,
+      transform: `perspective(600px) rotateX(${isDFSMode ? 180 : 0}deg)`,
       config: { mass: 5, tension: 500, friction: 80 },
     });
   
     const handleClick = () => {
-      setFlipped(!flipped);
-      setAlgorithm(flipped ? 'BFS' : 'DFS');
+      setAlgorithm(isDFSMode ? 'BFS' : 'DFS');
       resetTiles(rows, cols, numBlkdTiles);
     };
   
