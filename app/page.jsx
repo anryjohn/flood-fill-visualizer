@@ -1,3 +1,4 @@
+"use client"
 import React, { useState, useEffect } from 'react';
 import { useSpring, useSprings, animated } from '@react-spring/web'
 
