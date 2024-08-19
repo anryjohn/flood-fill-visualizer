@@ -1,4 +1,6 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+This is a [Next.js](https://nextjs.org/) project that illustrates BFS and DFS algorithms (and the difference between the two) via an interactible tool built around the [Flood Fill problem](https://en.wikipedia.org/wiki/Flood_fill). 
+
+This project was an exercise in learning to use frameworks and libraries such as Next.js, react-spring, and TailwindCSS.
 
 ## Getting Started
 
