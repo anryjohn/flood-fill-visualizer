@@ -1,4 +1,6 @@
-This is a [Next.js](https://nextjs.org/) project that illustrates BFS and DFS algorithms (and the difference between the two) via an interactible tool built around the [Flood Fill problem](https://en.wikipedia.org/wiki/Flood_fill). 
+This is a [Next.js](https://nextjs.org/) project that illustrates BFS and DFS algorithms (and the difference between the two) via an interactible tool built around the [Flood Fill problem](https://en.wikipedia.org/wiki/Flood_fill).
+
+To interact with this app, check it out [here](https://flood-fill-visualizer-3rt5.vercel.app/).
 
 This project was an exercise in learning to use frameworks and libraries such as Next.js, react-spring, and TailwindCSS.
 
